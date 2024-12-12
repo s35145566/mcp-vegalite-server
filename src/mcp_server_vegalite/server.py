@@ -12,13 +12,13 @@ logging.basicConfig(
     level=logging.INFO,  # Set the log level
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler("logs/mcp_datavis_server.log"),  # Log file path
+        logging.FileHandler("logs/mcp_vegalite_server.log"),  # Log file path
         logging.StreamHandler(),  # Optional: still output to the console
     ],
 )
 
-logger = logging.getLogger("mcp_datavis_server")
-logger.info("Starting MCP Data Visualization Server")
+logger = logging.getLogger("mcp_vegalite_server")
+logger.info("Starting MCP Vega-Lite Server")
 
 saved_data = {
     "sample_data": [
@@ -48,9 +48,9 @@ How to use this tool:
 
 
 async def main(output_type: str):
-    logger.info("Starting Data Visualization MCP Server")
+    logger.info("Starting Vega-Lite MCP Server")
 
-    server = Server("datavis-manager")
+    server = Server("vegalite-manager")
 
     # Register handlers
     logger.debug("Registering handlers")
@@ -157,7 +157,7 @@ async def main(output_type: str):
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="datavis",
+                server_name="vegalite",
                 server_version="0.1.0",
                 capabilities=server.get_capabilities(
                     notification_options=NotificationOptions(),
