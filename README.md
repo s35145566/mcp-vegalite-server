@@ -24,18 +24,20 @@ The server offers two core tools:
 ## Usage with Claude Desktop
 
 ```python
-// Add the server to your claude_desktop_config.json
-{"mcpServers": {
-  "datavis": {
-      "command": "uv",
-      "args": [
-          "--directory",
-          "/absolute/path/to/mcp-datavis-server",
-          "run",
-          "mcp_server_datavis",
-          "--output_type",
-          "png" // or "text"
-      ]
-  }}
+# Add the server to your claude_desktop_config.json
+{
+  "mcpServers": {
+    "datavis": {
+        "command": "uv",
+        "args": [
+            "--directory",
+            "/absolute/path/to/mcp-datavis-server",
+            "run",
+            "mcp_server_datavis",
+            "--output_type",
+            "png" # or "text"
+        ]
+    }
+  }
 }
 ```
