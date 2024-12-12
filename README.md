@@ -23,9 +23,9 @@ The server offers two core tools:
 
 ## Usage with Claude Desktop
 
-```json
-# Add the server to your claude_desktop_config.json
-"mcpServers": {
+```python
+// Add the server to your claude_desktop_config.json
+{"mcpServers": {
   "datavis": {
       "command": "uv",
       "args": [
@@ -36,6 +36,6 @@ The server offers two core tools:
           "--output_type",
           "png" // or "text"
       ]
-  }
+  }}
 }
 ```
