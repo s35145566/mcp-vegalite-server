@@ -1,4 +1,5 @@
 # Data Visualization MCP Server
+[![smithery badge](https://smithery.ai/badge/mcp-server-vegalite)](https://smithery.ai/server/mcp-server-vegalite)
 
 ## Overview
 A Model Context Protocol (MCP) server implementation that provides the LLM an interface for visualizing data using Vega-Lite syntax.
